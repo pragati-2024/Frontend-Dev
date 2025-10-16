@@ -1,0 +1,18 @@
+<!DOCTYPE html>
+<html>
+<head><title>Form with Iframe (Single File)</title></head>
+<body>
+  <form target="resultFrame" action="">
+    <input type="text" placeholder="Enter text" required>
+    <button type="submit">Submit</button>
+  </form>
+
+  <!-- Yahan srcdoc me seedha result ka message likha hai -->
+  <iframe 
+    name="resultFrame" 
+    width="400" 
+    height="100" 
+    srcdoc="<h2>Form successfully submitted.</h2>">
+  </iframe>
+</body>
+</html>
