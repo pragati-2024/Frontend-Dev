@@ -1,0 +1,137 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Dashboard Layout</title>
+  <style>
+    * {
+      box-sizing: border-box;
+      margin: 0;
+      padding: 0;
+    }
+
+    body {
+      font-family: Arial, sans-serif;
+      background-color: #f4f6f8;
+    }
+
+    /* Header */
+    header {
+      position: fixed;
+      top: 0;
+      left: 0;
+      width: 100%;
+      background-color: #2a4d69;
+      color: white;
+      padding: 15px 20px;
+      text-align: center;
+      font-size: 1.5rem;
+      z-index: 1000;
+      box-shadow: 0 2px 5px rgba(0,0,0,0.2);
+    }
+
+    /* Container */
+    .dashboard {
+      display: flex;
+      margin-top: 60px; /* space below header */
+      min-height: calc(100vh - 60px);
+    }
+
+    /* Sidebar */
+    .sidebar {
+      background-color: #1e3a56;
+      color: white;
+      width: 220px;
+      padding: 20px;
+      position: relative;
+    }
+
+    .sidebar nav a {
+      display: block;
+      color: white;
+      text-decoration: none;
+      padding: 10px 0;
+      font-size: 1rem;
+      transition: background 0.3s;
+    }
+
+    .sidebar nav a:hover {
+      background: rgba(255,255,255,0.1);
+      padding-left: 5px;
+    }
+
+    /* Main content */
+    .main-content {
+      flex: 1;
+      padding: 20px;
+      display: flex;
+      flex-wrap: wrap;
+      gap: 20px;
+      justify-content: space-around;
+    }
+
+    .content-box {
+      background-color: white;
+      padding: 20px;
+      flex: 1 1 300px;
+      min-height: 200px;
+      border-radius: 10px;
+      box-shadow: 0 4px 10px rgba(0,0,0,0.1);
+    }
+
+    .content-box h2 {
+      margin-bottom: 10px;
+      color: #2a4d69;
+    }
+
+    /* Responsive layout */
+    @media (max-width: 768px) {
+      .dashboard {
+        flex-direction: column;
+      }
+
+      .sidebar {
+        width: 100%;
+        text-align: center;
+      }
+
+      .sidebar nav a {
+        display: inline-block;
+        margin: 0 10px;
+      }
+    }
+
+  </style>
+</head>
+<body>
+
+  <header>
+    My Dashboard
+  </header>
+
+  <div class="dashboard">
+    <aside class="sidebar">
+      <nav>
+        <a href="#">🏠 Home</a>
+        <a href="#">📊 Reports</a>
+        <a href="#">⚙️ Settings</a>
+        <a href="#">📩 Messages</a>
+        <a href="#">🚪 Logout</a>
+      </nav>
+    </aside>
+
+    <main class="main-content">
+      <div class="content-box">
+        <h2>Statistics</h2>
+        <p>This is where the stats or charts will go. You can customize this box with graphs, tables, or other widgets.</p>
+      </div>
+      <div class="content-box">
+        <h2>Recent Activity</h2>
+        <p>This section can display recent user activity or updates.</p>
+      </div>
+    </main>
+  </div>
+
+</body>
+</html>

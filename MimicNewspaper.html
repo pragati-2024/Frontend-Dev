@@ -1,0 +1,111 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Newspaper Layout</title>
+  <style>
+    * {
+      box-sizing: border-box;
+      margin: 0;
+      padding: 0;
+    }
+
+    body {
+      background-color: #f5f3e7;
+      font-family: "Georgia", serif;
+      padding: 30px;
+    }
+
+    .newspaper {
+      max-width: 1000px;
+      margin: 0 auto;
+      background: #fff;
+      padding: 40px;
+      box-shadow: 0 4px 10px rgba(0,0,0,0.1);
+      column-count: 3;
+      column-gap: 30px;
+    }
+
+    h1 {
+      column-span: all;
+      text-align: center;
+      font-size: 2.5rem;
+      margin-bottom: 20px;
+      font-family: "Times New Roman", Times, serif;
+      border-bottom: 2px solid #333;
+      padding-bottom: 10px;
+    }
+
+    p {
+      text-align: justify;
+      margin-bottom: 20px;
+      line-height: 1.7;
+      font-size: 1rem;
+    }
+
+    img {
+      float: left;
+      margin: 0 15px 15px 0;
+      width: 200px;
+      border-radius: 5px;
+    }
+
+    @media (max-width: 900px) {
+      .newspaper {
+        column-count: 2;
+      }
+    }
+
+    @media (max-width: 600px) {
+      .newspaper {
+        column-count: 1;
+      }
+
+      img {
+        float: none;
+        display: block;
+        margin: 0 auto 20px;
+      }
+    }
+  </style>
+</head>
+<body>
+
+  <div class="newspaper">
+    <h1>Exploring the Beauty of the World</h1>
+
+    <img src="https://picsum.photos/id/1015/400/300" alt="Nature">
+
+    <p>
+      Traveling is not just about seeing new places — it’s about feeling them. 
+      The smell of the ocean breeze, the sound of foreign chatter, and the sight 
+      of landscapes untouched by time make journeys unforgettable.
+    </p>
+
+    <p>
+      Every city has a rhythm, a pulse that tells its own story. From the crowded 
+      streets of metropolitan cities to the quiet whispers of mountain villages, 
+      each place leaves a mark on our souls.
+    </p>
+
+    <p>
+      Nature reminds us of how small we are in the grand design of things. 
+      Mountains stand tall, rivers flow endlessly, and forests breathe life 
+      into our planet. 
+    </p>
+
+    <p>
+      Whether you're exploring ancient ruins, relaxing on sunny beaches, or 
+      walking through green valleys, travel opens the door to perspectives 
+      we’ve never known before.
+    </p>
+
+    <p>
+      The world is vast and full of wonder. All we need is a curious heart 
+      and the courage to step beyond the familiar.
+    </p>
+  </div>
+
+</body>
+</html>
