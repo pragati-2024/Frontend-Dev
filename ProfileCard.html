@@ -1,0 +1,142 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Team Members Layout</title>
+  <style>
+    :root {
+      --bg: #f2f5f9;
+      --card-bg: #ffffff;
+      --lead-bg: #e3d7ff;
+      --text: #222;
+      --muted: #666;
+      --accent: #6b21a8;
+      --shadow: 0 8px 18px rgba(0, 0, 0, 0.08);
+    }
+
+    * {
+      box-sizing: border-box;
+      margin: 0;
+      padding: 0;
+    }
+
+    body {
+      font-family: "Segoe UI", Arial, sans-serif;
+      background-color: var(--bg);
+      color: var(--text);
+      padding: 2rem;
+    }
+
+    h1 {
+      text-align: center;
+      margin-bottom: 2rem;
+      font-size: 2rem;
+      font-weight: 800;
+      color: var(--accent);
+    }
+
+    /* ------------------ TEAM LAYOUT ------------------ */
+    .team-container {
+      display: flex;
+      justify-content: center;
+      gap: 1.5rem;
+      max-width: 1100px;
+      margin: 0 auto;
+      flex-wrap: wrap; /* allows wrap on small screens */
+    }
+
+    .team-card {
+      background-color: var(--card-bg);
+      padding: 1.5rem;
+      flex: 1 1 30%; /* grows and shrinks with a base width of ~30% */
+      min-width: 280px;
+      border: 2px solid #ddd;
+      border-radius: 12px;
+      text-align: center;
+      box-shadow: var(--shadow);
+      transition: transform 0.2s ease, box-shadow 0.2s ease;
+    }
+
+    .team-card:hover {
+      transform: translateY(-5px);
+      box-shadow: 0 12px 24px rgba(0, 0, 0, 0.12);
+    }
+
+    .team-card img {
+      width: 120px;
+      height: 120px;
+      border-radius: 50%;
+      object-fit: cover;
+      margin-bottom: 1rem;
+      border: 3px solid var(--accent);
+    }
+
+    .team-card h2 {
+      font-size: 1.3rem;
+      margin-bottom: 0.3rem;
+    }
+
+    .team-card h3 {
+      font-size: 1rem;
+      color: var(--accent);
+      margin-bottom: 0.7rem;
+    }
+
+    .team-card p {
+      font-size: 0.95rem;
+      color: var(--muted);
+      line-height: 1.5;
+    }
+
+    /* -------- HIGHLIGHT LEAD CARD -------- */
+    .team-card.lead {
+      background-color: var(--lead-bg);
+      border: 2px solid var(--accent);
+    }
+
+    /* ---------------- RESPONSIVE ---------------- */
+    @media (max-width: 600px) {
+      .team-container {
+        flex-direction: column;
+        align-items: center;
+      }
+      .team-card {
+        width: 100%;
+        max-width: 400px;
+      }
+    }
+  </style>
+</head>
+<body>
+
+  <h1>Meet Our Team</h1>
+
+  <div class="team-container">
+    <!-- Team Lead -->
+    <div class="team-card lead">
+      <img src="https://images.unsplash.com/photo-1595152772835-219674b2a8a6?auto=format&fit=crop&w=400&q=80" alt="Team Lead Photo">
+      <h2>Sarah Williams</h2>
+      <h3>Team Lead</h3>
+      <p>Sarah is the visionary behind our projects. She ensures every task is executed with precision and creativity.</p>
+    </div>
+
+    <!-- Team Member 1 -->
+    <div class="team-card">
+      <img src="https://images.unsplash.com/photo-1544723795-3fb6469f5b39?auto=format&fit=crop&w=400&q=80" alt="Designer Photo">
+      <h2>James Smith</h2>
+      <h3>UI/UX Designer</h3>
+      <p>James designs intuitive user interfaces and smooth experiences that bring our products to life.</p>
+    </div>
+
+    <!-- Team Member 2 -->
+    <div class="team-card">
+      <img src="https://images.unsplash.com/photo-1529626455594-4ff0802cfb7e?auto=format&fit=crop&w=400&q=80" alt="Developer Photo">
+      <h2>Emily Johnson</h2>
+      <h3>Frontend Developer</h3>
+      <p>Emily transforms design concepts into pixel-perfect, responsive websites using modern web technologies.</p>
+    </div>
+  </div>
+
+</body>
+</html>

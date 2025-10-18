@@ -1,0 +1,154 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>About Paris - Informational Webpage</title>
+  <style>
+    :root {
+      --text: #ffffff;
+      --muted: #f0f0f0cc;
+      --accent: #ffcc33;
+      --bg-dark: #1a1a1a;
+      --max-width: 1000px;
+    }
+    * { margin: 0; padding: 0; box-sizing: border-box; }
+    body {
+      font-family: "Segoe UI", Arial, sans-serif;
+      background-color: var(--bg-dark);
+      color: var(--text);
+      line-height: 1.6;
+    }
+
+    /* ---------- HEADER & NAV ---------- */
+    header {
+      background: #000000d9;
+      padding: 1rem;
+      text-align: center;
+      position: sticky;
+      top: 0;
+      z-index: 100;
+    }
+    header h1 {
+      font-size: 2rem;
+      font-weight: 800;
+      margin-bottom: 0.5rem;
+    }
+    nav a {
+      color: var(--text);
+      text-decoration: none;
+      margin: 0 0.75rem;
+      font-weight: 500;
+    }
+    nav a:hover {
+      color: var(--accent);
+    }
+
+    /* ---------- MAIN SECTIONS ---------- */
+    main section {
+      padding: 4rem 1rem;
+      text-align: center;
+      border-bottom: 2px solid rgba(255,255,255,0.1);
+    }
+    main section h2 {
+      font-size: 2rem;
+      font-weight: 700;
+      margin-bottom: 1rem;
+    }
+    main section p {
+      max-width: var(--max-width);
+      margin: 0 auto;
+      font-size: 1.1rem;
+      color: var(--muted);
+    }
+
+    /* 1. Hero Section (Background image + overlay) */
+    .hero {
+      background: linear-gradient(
+                  rgba(0, 0, 0, 0.55),
+                  rgba(0, 0, 0, 0.55)
+                ),
+                url("https://images.unsplash.com/photo-1543342386-1bf98d7b2c7f?auto=format&fit=crop&w=1350&q=80") center/cover no-repeat;
+      color: #fff;
+    }
+
+    /* 2. History Section (Linear Gradient) */
+    .history {
+      background: linear-gradient(135deg, #2b1055, #7597de);
+    }
+
+    /* 3. Attractions Section (Radial Gradient) */
+    .attractions {
+      background: radial-gradient(circle, #ff6f61, #c0392b);
+    }
+
+    /* 4. Culture Section (Fixed background attachment) */
+    .culture {
+      background: linear-gradient(
+                  rgba(0, 0, 0, 0.6),
+                  rgba(0, 0, 0, 0.6)
+                ),
+                url("https://images.unsplash.com/photo-1489515217757-5fd1be406fef?auto=format&fit=crop&w=1350&q=80") center/cover no-repeat;
+      background-attachment: fixed; /* Parallax-like effect */
+    }
+
+    /* ---------- FOOTER ---------- */
+    footer {
+      background: #000;
+      text-align: center;
+      padding: 1rem;
+      color: var(--muted);
+      font-size: 0.9rem;
+    }
+
+    /* ---------- RESPONSIVE ---------- */
+    @media (max-width: 600px) {
+      header h1 { font-size: 1.5rem; }
+      main section h2 { font-size: 1.5rem; }
+      main section p { font-size: 1rem; padding: 0 0.5rem; }
+    }
+  </style>
+</head>
+<body>
+
+  <!-- ===== HEADER ===== -->
+  <header>
+    <h1>Discover Paris</h1>
+    <nav>
+      <a href="#hero">Home</a>
+      <a href="#history">History</a>
+      <a href="#attractions">Attractions</a>
+      <a href="#culture">Culture</a>
+    </nav>
+  </header>
+
+  <!-- ===== MAIN CONTENT ===== -->
+  <main>
+    <section id="hero" class="hero">
+      <h2>Welcome to Paris</h2>
+      <p>Known as the “City of Light,” Paris is famous for its art, fashion, culture, and cuisine. From the iconic Eiffel Tower to charming cafés, the city offers unforgettable experiences.</p>
+    </section>
+
+    <section id="history" class="history">
+      <h2>Rich History</h2>
+      <p>Paris has a long and fascinating history dating back over 2,000 years. From its Roman origins to becoming a hub of art and revolution, the city is layered with stories and architectural treasures.</p>
+    </section>
+
+    <section id="attractions" class="attractions">
+      <h2>Top Attractions</h2>
+      <p>Explore the Eiffel Tower, Louvre Museum, Notre-Dame Cathedral, and Montmartre. Whether day or night, every corner of Paris has a unique charm waiting to be discovered.</p>
+    </section>
+
+    <section id="culture" class="culture">
+      <h2>Vibrant Culture</h2>
+      <p>Paris is home to world-class art, cinema, fashion, and gastronomy. Stroll along the Seine River, visit galleries, or enjoy a croissant in a historic café — Parisian culture is pure magic.</p>
+    </section>
+  </main>
+
+  <!-- ===== FOOTER ===== -->
+  <footer>
+    &copy; 2025 Explore Paris | Made with ❤️ for Web Design Practice
+  </footer>
+
+</body>
+</html>
