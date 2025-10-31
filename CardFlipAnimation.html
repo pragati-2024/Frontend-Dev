@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width,initial-scale=1" />
+  <title>Card Flip</title>
+  <style>
+    *{box-sizing:border-box;margin:0;padding:0;font-family:Arial}
+    body{min-height:100vh;display:flex;align-items:center;justify-content:center;background:#eef2f6}
+    .scene { perspective: 1000px; width:320px; height:420px; }
+    .card {
+      width:100%;height:100%;
+      position:relative;
+      transform-style: preserve-3d;
+      transition: transform 0.8s ease;
+    }
+    .card:hover { transform: rotateY(180deg); }
+
+    .face {
+      position:absolute; inset:0; backface-visibility: hidden;
+      border-radius:10px; overflow:hidden; box-shadow:0 10px 30px rgba(0,0,0,0.12);
+      display:flex; flex-direction:column; align-items:center; justify-content:flex-start;
+      background:#fff;
+    }
+
+    .front img { width:100%; height:60%; object-fit:cover; display:block; }
+    .front h3 { margin:1rem; }
+    .back { transform: rotateY(180deg); padding:1.2rem; color:#222; }
+    .back p { line-height:1.5; }
+
+    /* small styling */
+    .front { text-align:center; }
+    .front h3 { padding:0.6rem 1rem; font-size:1.1rem; }
+
+    /* center helper for smaller screens */
+    @media (max-width:420px) {
+      .scene { width:280px; height:380px; }
+    }
+  </style>
+</head>
+<body>
+  <div class="scene" aria-hidden="false">
+    <div class="card" role="button" tabindex="0">
+      <div class="face front">
+        <img src="https://via.placeholder.com/800x600?text=Card+Image" alt="card image">
+        <h3>Card Title</h3>
+      </div>
+
+      <div class="face back">
+        <h3>About this card</h3>
+        <p>This is the back side with a short description. Hover (or focus) the card to flip and reveal this content.</p>
+      </div>
+    </div>
+  </div>
+</body>
+</html>

@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width,initial-scale=1" />
+  <title>Loading Dots</title>
+  <style>
+    *{box-sizing:border-box;margin:0;padding:0}
+    body{height:100vh;display:flex;align-items:center;justify-content:center;background:#f7fafc;font-family:Arial}
+    .loader {
+      display:flex;
+      gap:16px;
+      align-items:flex-end; /* baseline for translateY */
+    }
+    .dot {
+      width:18px;height:18px;border-radius:50%;
+      background:#333;
+      transform: translateY(0);
+      animation: upDown 0.8s infinite ease-in-out;
+    }
+    .dot:nth-child(1){ animation-delay: 0s; }
+    .dot:nth-child(2){ animation-delay: 0.12s; }
+    .dot:nth-child(3){ animation-delay: 0.24s; }
+
+    @keyframes upDown {
+      0% { transform: translateY(0); }
+      25% { transform: translateY(-12px); }
+      50% { transform: translateY(0); }
+      75% { transform: translateY(-6px); }
+      100% { transform: translateY(0); }
+    }
+    /* center container responsiveness */
+    .wrap { display:flex; align-items:center; justify-content:center; min-height:100vh; width:100%; }
+  </style>
+</head>
+<body>
+  <div class="wrap">
+    <div class="loader" role="img" aria-label="Loading">
+      <div class="dot"></div>
+      <div class="dot"></div>
+      <div class="dot"></div>
+    </div>
+  </div>
+</body>
+</html>
