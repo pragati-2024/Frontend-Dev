@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Height & Width</title>
+<style>
+  body {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    gap: 20px;
+  }
+  .box {
+    overflow: auto;
+    color: white;
+    text-align: center;
+    padding: 10px;
+  }
+  .box1 { width: 150px; height: 100px; background: teal; }
+  .box2 { width: 30%; min-height: 150px; background: purple; }
+  .box3 { width: 10em; max-width: 200px; height: 20vh; background: orange; }
+</style>
+</head>
+<body>
+  <div class="box box1">px</div>
+  <div class="box box2">%</div>
+  <div class="box box3">vh & em</div>
+</body>
+</html>

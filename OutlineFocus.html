@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Outline Form</title>
+<style>
+  body {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+  }
+  form {
+    display: flex;
+    flex-direction: column;
+    gap: 15px;
+  }
+  input, textarea {
+    padding: 10px;
+    border-radius: 5px;
+    border: 1px solid #aaa;
+    outline: 2px solid transparent;
+    transition: all 0.3s;
+  }
+  input:focus, textarea:focus {
+    outline-color: blue;
+    outline-offset: 3px;
+  }
+</style>
+</head>
+<body>
+  <form>
+    <input type="text" placeholder="Your Name">
+    <textarea rows="3" placeholder="Message"></textarea>
+    <button type="submit">Send</button>
+  </form>
+</body>
+</html>

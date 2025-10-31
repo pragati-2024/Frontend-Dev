@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Selectors Demo</title>
+<style>
+  /* Attribute selector */
+  input[type="text"] { border: 2px solid blue; }
+
+  /* Link starting with https */
+  a[href^="https"] { color: green; }
+
+  /* Pseudo-class */
+  li:hover { color: red; }
+
+  /* nth-child */
+  li:nth-child(odd) { background: #eee; }
+
+  /* Pseudo-element */
+  h2::before { content: "★ "; color: orange; }
+
+  /* Combinators */
+  ul > li { font-weight: bold; }
+  p + span { color: blue; }
+  p ~ a { font-style: italic; }
+</style>
+</head>
+<body>
+  <h2>CSS Selectors Example</h2>
+  <input type="text" placeholder="Type here...">
+  <ul>
+    <li>Item 1</li>
+    <li>Item 2</li>
+    <li>Item 3</li>
+  </ul>
+  <p>Paragraph</p>
+  <span>Next element styled</span>
+  <a href="https://example.com">Example link</a>
+</body>
+</html>

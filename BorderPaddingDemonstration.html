@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Borders and Padding</title>
+<style>
+  body {
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    min-height: 100vh;
+    font-family: Arial;
+  }
+  .box {
+    padding: 20px;
+    width: 120px;
+    text-align: center;
+    transition: border-color 0.4s;
+  }
+  .solid { border: 3px solid #333; }
+  .dashed { border: 3px dashed #555; }
+  .double { border: 5px double #777; }
+  .groove { border: 5px groove #999; border-radius: 10px; }
+  .box:hover { border-color: crimson; }
+</style>
+</head>
+<body>
+  <div class="box solid">Solid</div>
+  <div class="box dashed">Dashed</div>
+  <div class="box double">Double</div>
+  <div class="box groove">Groove</div>
+</body>
+</html>
