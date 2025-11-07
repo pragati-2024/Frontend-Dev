@@ -1,0 +1,86 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>User Interface Components</title>
+<style>
+body{
+  font-family: Arial, sans-serif;
+  background: linear-gradient(135deg,#e0e7ff,#f0fdf4);
+  height:100vh;
+  display:flex;
+  justify-content:center;
+  align-items:center;
+  margin:0;
+}
+.card{
+  background:white;
+  padding:30px;
+  border-radius:16px;
+  box-shadow:0 6px 16px rgba(0,0,0,0.15);
+  display:flex;
+  flex-direction:column;
+  align-items:center;
+  gap:20px;
+  width:320px;
+}
+input[type="search"]{
+  width:100%;
+  padding:10px 14px;
+  border:2px solid #c7d2fe;
+  border-radius:8px;
+  font-size:15px;
+  transition:border 0.3s ease;
+}
+input[type="search"]:focus{
+  outline:none;
+  border-color:#6366f1;
+}
+button{
+  padding:10px 16px;
+  border:none;
+  border-radius:8px;
+  cursor:pointer;
+  background:#6366f1;
+  color:white;
+  font-weight:bold;
+  transition:background 0.3s ease;
+}
+button:hover{
+  background:#4f46e5;
+}
+button:active{
+  background:#3730a3;
+}
+select{
+  width:100%;
+  padding:10px 14px;
+  border:2px solid #cbd5e1;
+  border-radius:8px;
+  font-size:15px;
+  transition:border 0.3s ease;
+}
+select:focus{
+  outline:none;
+  border-color:#4f46e5;
+}
+</style>
+</head>
+<body>
+<div class="card">
+  <h2>UI Components</h2>
+  <input type="search" placeholder="Search..." />
+  <div style="display:flex;gap:10px;">
+    <button>Search</button>
+    <button style="background:#10b981;">Reset</button>
+  </div>
+  <select>
+    <option>Select Category</option>
+    <option>Technology</option>
+    <option>Science</option>
+    <option>Education</option>
+  </select>
+</div>
+</body>
+</html>

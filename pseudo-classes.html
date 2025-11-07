@@ -1,0 +1,84 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Pseudo-Classes Demo</title>
+<style>
+body{
+  font-family: Arial, sans-serif;
+  background: #f0f4ff;
+  margin: 0;
+  padding: 40px;
+}
+.container{
+  display: flex;
+  justify-content: space-around;
+  align-items: flex-start;
+  gap: 20px;
+  flex-wrap: wrap;
+}
+.example{
+  background: #fff;
+  padding: 20px;
+  border-radius: 10px;
+  box-shadow: 0 4px 10px rgba(0,0,0,0.1);
+  width: 220px;
+  text-align: center;
+}
+a, button, li{
+  display:inline-block;
+  margin-top:10px;
+  padding:8px 14px;
+  background:#dbeafe;
+  color:#1e3a8a;
+  border:none;
+  border-radius:6px;
+  cursor:pointer;
+  text-decoration:none;
+  transition: all 0.3s ease;
+}
+
+/* Pseudo-class effects */
+a:hover, button:hover, li:hover{ background:#93c5fd; color:#fff; }
+a:active, button:active{ background:#1e3a8a; color:white; }
+button:focus{ outline:3px solid #60a5fa; }
+ul{ list-style:none; padding:0; margin:0;}
+ul li:nth-child(even){ background:#eff6ff; }
+ul li:nth-child(odd){ background:#bfdbfe; }
+</style>
+</head>
+<body>
+<h2>CSS Pseudo-Classes Demonstration</h2>
+<div class="container">
+  <div class="example">
+    <h3>:hover</h3>
+    <a href="#">Hover Link</a>
+    <p>Changes color when hovered.</p>
+  </div>
+
+  <div class="example">
+    <h3>:focus</h3>
+    <button>Click &amp; Focus</button>
+    <p>Outline appears when focused.</p>
+  </div>
+
+  <div class="example">
+    <h3>:active</h3>
+    <button>Press Me</button>
+    <p>Dark color on active click.</p>
+  </div>
+
+  <div class="example">
+    <h3>:nth-child()</h3>
+    <ul>
+      <li>Item 1</li>
+      <li>Item 2</li>
+      <li>Item 3</li>
+      <li>Item 4</li>
+    </ul>
+    <p>Alternating background using <code>:nth-child()</code>.</p>
+  </div>
+</div>
+</body>
+</html>

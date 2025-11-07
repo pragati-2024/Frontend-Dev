@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>CSS Animation Demonstration</title>
+<style>
+body{
+  font-family: Arial, sans-serif;
+  background:#f0f4ff;
+  margin:0;
+  display:flex;
+  justify-content:center;
+  align-items:center;
+  height:100vh;
+}
+.container{
+  display:flex;
+  justify-content:center;
+  align-items:center;
+  gap:50px;
+  flex-wrap:wrap;
+}
+
+/* 1️⃣ Moving Box */
+.box{
+  width:60px;
+  height:60px;
+  background:#3b82f6;
+  border-radius:10px;
+  animation: move 3s ease-in-out infinite alternate;
+}
+@keyframes move{
+  0%{transform:translateX(0);}
+  100%{transform:translateX(80px);}
+}
+
+/* 2️⃣ Bouncing Ball */
+.ball{
+  width:60px;
+  height:60px;
+  background:#10b981;
+  border-radius:50%;
+  animation: bounce 1s ease-in-out infinite;
+}
+@keyframes bounce{
+  0%,100%{transform:translateY(0);}
+  50%{transform:translateY(-80px);}
+}
+
+/* 3️⃣ Color-Changing Text */
+.text{
+  font-size:24px;
+  font-weight:bold;
+  color:#1e3a8a;
+  animation: colorchange 4s ease-in-out infinite alternate;
+}
+@keyframes colorchange{
+  0%{color:#1e3a8a;}
+  50%{color:#ef4444;}
+  100%{color:#10b981;}
+}
+</style>
+</head>
+<body>
+<div class="container">
+  <div class="box"></div>
+  <div class="ball"></div>
+  <div class="text">Animated Text ✨</div>
+</div>
+</body>
+</html>

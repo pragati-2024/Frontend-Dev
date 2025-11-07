@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Box-Sizing Comparison</title>
+<style>
+body{
+  font-family: Arial, sans-serif;
+  background:#f9fafb;
+  margin:0;
+  padding:40px;
+  display:flex;
+  flex-direction:column;
+  align-items:center;
+  text-align:center;
+}
+.container{
+  display:flex;
+  justify-content:center;
+  align-items:flex-start;
+  gap:40px;
+  flex-wrap:wrap;
+  margin-top:30px;
+}
+.box{
+  width:200px;
+  padding:20px;
+  border:10px solid #2563eb;
+  background:#dbeafe;
+  color:#1e3a8a;
+  font-weight:bold;
+  border-radius:10px;
+  box-shadow:0 4px 8px rgba(0,0,0,0.1);
+}
+.border-box{
+  box-sizing:border-box;
+  background:#a7f3d0;
+  border-color:#059669;
+}
+.description{
+  max-width:600px;
+  margin-top:20px;
+  color:#374151;
+}
+@media(max-width:600px){
+  .container{flex-direction:column;}
+}
+</style>
+</head>
+<body>
+<h2>Box-Sizing Comparison</h2>
+<p>Both boxes below have the same <strong>width (200px)</strong> and <strong>padding (20px)</strong> — but different <code>box-sizing</code> values.</p>
+
+<div class="container">
+  <div class="box">Default (content-box)</div>
+  <div class="box border-box">border-box</div>
+</div>
+
+<p class="description">
+  🧩 With <strong>content-box</strong> (default), padding and border add to the total size.<br>
+  ✅ With <strong>border-box</strong>, the total width includes padding and border, so the box stays the same width.
+</p>
+</body>
+</html>

@@ -1,0 +1,91 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Tooltip Demonstration</title>
+<style>
+body{
+  font-family: Arial, sans-serif;
+  background:#f8fafc;
+  display:flex;
+  justify-content:center;
+  align-items:center;
+  min-height:100vh;
+}
+.container{
+  display:flex;
+  gap:40px;
+  justify-content:center;
+  align-items:center;
+  flex-wrap:wrap;
+}
+.tooltip{
+  position:relative;
+  display:inline-block;
+  background:#e0e7ff;
+  color:#1e3a8a;
+  padding:10px 16px;
+  border-radius:6px;
+  cursor:pointer;
+  font-weight:bold;
+}
+
+/* Tooltip text */
+.tooltip .tooltip-text{
+  visibility:hidden;
+  opacity:0;
+  width:160px;
+  background:#1e3a8a;
+  color:#fff;
+  text-align:center;
+  border-radius:6px;
+  padding:8px;
+  position:absolute;
+  bottom:125%;
+  left:50%;
+  transform:translateX(-50%);
+  transition:opacity 0.3s ease-in-out;
+  pointer-events:none;
+  z-index:10;
+}
+
+/* small arrow */
+.tooltip .tooltip-text::after{
+  content:"";
+  position:absolute;
+  top:100%;
+  left:50%;
+  margin-left:-5px;
+  border-width:5px;
+  border-style:solid;
+  border-color:#1e3a8a transparent transparent transparent;
+}
+
+/* hover state */
+.tooltip:hover .tooltip-text{
+  visibility:visible;
+  opacity:1;
+}
+</style>
+</head>
+<body>
+<div class="container">
+  <div class="tooltip">ℹ️ Info
+    <span class="tooltip-text">This is an info tooltip!</span>
+  </div>
+
+  <div class="tooltip">❤️ Like
+    <span class="tooltip-text">Click to like the post!</span>
+  </div>
+
+  <div class="tooltip">💬 Comment
+    <span class="tooltip-text">Add your comment here!</span>
+  </div>
+
+  <div class="tooltip">⚙️ Settings
+    <span class="tooltip-text">Adjust your preferences.</span>
+  </div>
+</div>
+</body>
+</html>

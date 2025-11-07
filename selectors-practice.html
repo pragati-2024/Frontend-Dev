@@ -1,0 +1,116 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>CSS Selectors Practice</title>
+<style>
+/* ---------- Basic Page Styling ---------- */
+body{
+  font-family: Arial, sans-serif;
+  background:#f9fafb;
+  margin:0;
+  padding:40px;
+  line-height:1.6;
+}
+header, footer{
+  text-align:center;
+  padding:20px;
+  background:#e0e7ff;
+  border-radius:10px;
+  margin-bottom:20px;
+}
+footer{margin-top:30px;}
+main{max-width:800px;margin:auto;}
+
+/* ---------- Element Selector ---------- */
+p{
+  color:#1e3a8a;
+}
+
+/* ---------- Class Selector ---------- */
+.note{
+  background:#dbeafe;
+  border-left:5px solid #1e40af;
+  padding:10px;
+  border-radius:6px;
+}
+
+/* ---------- ID Selector ---------- */
+#special{
+  color:#b91c1c;
+  font-weight:bold;
+}
+
+/* ---------- Attribute Selector ---------- */
+a[target="_blank"]{
+  color:#047857;
+  text-decoration:underline;
+}
+
+/* ---------- Combinators ---------- */
+/* Descendant selector */
+section p{
+  font-size:15px;
+}
+
+/* Child selector */
+ul > li{
+  color:#111827;
+  font-weight:bold;
+}
+
+/* Adjacent sibling selector */
+h3 + p{
+  color:#6b21a8;
+}
+
+/* General sibling selector */
+h4 ~ p{
+  background:#fef3c7;
+  padding:5px;
+  border-radius:5px;
+}
+</style>
+</head>
+<body>
+<header>
+  <h1>CSS Selectors Practice Page</h1>
+  <p>Examples of element, class, ID, attribute, and combinator selectors.</p>
+</header>
+
+<main>
+  <section>
+    <h2>Element, Class &amp; ID Selectors</h2>
+    <p>This paragraph uses the <strong>element selector</strong>.</p>
+    <p class="note">This is styled using a <strong>class selector (.note)</strong>.</p>
+    <p id="special">This one uses an <strong>ID selector (#special)</strong>.</p>
+  </section>
+
+  <section>
+    <h2>Attribute Selector</h2>
+    <a href="https://example.com" target="_blank">Open Example (new tab)</a>
+    <p>Links with <code>target="_blank"</code> turn green.</p>
+  </section>
+
+  <section>
+    <h2>Combinator Selectors</h2>
+    <h3>Heading 3</h3>
+    <p>Adjacent sibling (h3 + p)</p>
+
+    <h4>Heading 4</h4>
+    <p>Paragraph after h4 (general sibling ~)</p>
+    <p>Another paragraph after h4 (also styled by ~)</p>
+
+    <ul>
+      <li>Child item 1</li>
+      <li>Child item 2</li>
+    </ul>
+  </section>
+</main>
+
+<footer>
+  <p>Created for CSS Selectors demonstration.</p>
+</footer>
+</body>
+</html>

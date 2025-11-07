@@ -1,0 +1,79 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Combined Effects Demonstration</title>
+  <style>
+    /* Container using Flexbox */
+    body {
+      font-family: Arial, sans-serif;
+      background: #f4f6f8;
+      margin: 0;
+      height: 100vh;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      justify-content: center;
+    }
+
+    h2 {
+      margin-bottom: 40px;
+      color: #333;
+    }
+
+    .btn-container {
+      display: flex;
+      gap: 30px;
+      flex-wrap: wrap;
+      justify-content: center;
+    }
+
+    /* Base Button Style */
+    .effect-btn {
+      padding: 15px 30px;
+      border: none;
+      border-radius: 10px;
+      font-size: 16px;
+      color: #fff;
+      cursor: pointer;
+      box-shadow: 0 4px 10px rgba(0,0,0,0.2);
+      transition: all 0.3s ease-in-out;
+    }
+
+    /* Different button colors */
+    .blue { background-color: #0077cc; }
+    .pink { background-color: #ff5a8a; }
+    .green { background-color: #28a745; }
+
+    /* Hover effect */
+    .effect-btn:hover {
+      transform: scale(1.1);
+      background-color: #444;
+      box-shadow: 0 6px 18px rgba(0,0,0,0.3);
+    }
+
+    /* Active (when clicked) */
+    .effect-btn:active {
+      transform: scale(1.05);
+      background-color: #222;
+    }
+
+    /* Focused (when tabbed) */
+    .effect-btn:focus {
+      outline: 2px solid #000;
+    }
+
+  </style>
+</head>
+<body>
+  <h2>✨ Combined CSS Effects Demonstration ✨</h2>
+
+  <div class="btn-container">
+    <button class="effect-btn blue">Hover Me</button>
+    <button class="effect-btn pink">Watch Me Glow</button>
+    <button class="effect-btn green">Feel The Effect</button>
+  </div>
+
+</body>
+</html>
